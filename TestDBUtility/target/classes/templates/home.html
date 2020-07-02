@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Database Utility Work</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+	 //<![CDATA[
+	function triggerMail() {
+		  var xhttp = new XMLHttpRequest();
+		  var email =  document.getElementById("email").value;
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		      alert("Mail Sent")
+		    }
+		  };
+		  xhttp.open("GET", "http://localhost:8080/api/customers/sendMail?mail="+email, true);
+		  xhttp.send();
+		}
+	//]]>
+	</script>
+		<h3></h3>
+		<div>
+		<input type="text" id="email" value="kesa.hari1@gmail.com "/>
+			<input type="button" value="Send mail" onclick="triggerMail()"/>
+			<a href="http://localhost:8080/api/customers/downloadReport">Download Report</a>
+		</div>
+	</body>
+</html>

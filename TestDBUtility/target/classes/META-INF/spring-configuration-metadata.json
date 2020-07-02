@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.db1.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.test.dbutility.config.DB1Config",
+      "sourceMethod": "public javax.sql.DataSource postgresqlDataSource() "
+    },
+    {
+      "name": "spring.db2.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.test.dbutility.config.DB2Config",
+      "sourceMethod": "public javax.sql.DataSource mysqlDataSource() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
